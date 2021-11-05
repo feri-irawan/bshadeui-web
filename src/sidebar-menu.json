@@ -20,7 +20,6 @@
     { "title": "Text Decoration (Line, Style & Color)" },
 
     { "title": "FLEXBOX", "isTitle": true },
-    { "title": "Flex" },
     { "title": "Flex Flow" },
     { "title": "Flex Direction" },
     { "title": "Justify Content" },
@@ -29,6 +28,7 @@
     { "title": "Align Content" },
     { "title": "Align Self" },
     { "title": "Align Items" },
+    { "title": "Row & Col" },
 
     { "title": "GRID", "isTitle": true },
     { "title": "Grid Template Columns" },

@@ -18,7 +18,6 @@
     { "title": "Text Decoration Color", "className": "decoration-{color}" },
 
     { "title": "FLEXBOX", "isTitle": true },
-    { "title": "Flex", "className": "{name}" },
     { "title": "Flex Flow", "className": "flow-{name}" },
     { "title": "Flex Direction", "className": "direction-{direction}" },
     { "title": "Justify Content", "className": "justify-content-{name}" },
@@ -27,6 +26,8 @@
     { "title": "Align Content", "className": "align-content-{name}" },
     { "title": "Align Self", "className": "align-self-{name}" },
     { "title": "Align Items", "className": "align-items-{name}" },
+    { "title": "Flexbox Row", "className": "row" },
+    { "title": "Flexbox Col", "className": "col-{size}" },
 
     { "title": "GRID", "isTitle": true },
     { "title": "Grid Template Columns", "className": "grid-cols-{maxColumn}" },

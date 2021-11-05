@@ -1,0 +1,17 @@
+{% set title = "Colors" %}
+{% set filename = "colors.html" %}
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+    <div class="text-center">
+        <h1>Color List</h1>
+        <p>Berikut daftar warna yang disediakan BshadeUI. Letakkan cursor di atas warna untuk melihat nama warnanya, enjoy!</p>
+        <div class="grid grid-cols-4 xs:grid-cols-6 sm:grid-cols-8 md:grid-cols-10 lg:grid-cols-12 gap-1">
+            {% for color in colors %}
+                {% for level in colorLevels %}
+                    <div title="{{color}}-{{level}}" class="cursor-pointer p-0.5 radius-0.3 bg-{{color}}-{{level}}"></div>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{
+    "html.format.wrapLineLength": 120,
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[nunjucks]": {
+        "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
+    },
+    "auto-rename-tag.activationOnLanguage": ["nunjucks"],
+    "emmet.includeLanguages": {
+        "njk": "html",
+        "nunjucks": "html"
+    }
+}

@@ -1,0 +1,15 @@
+code {
+    font-size: 0.890rem;
+    color: #d63384;
+    word-wrap: break-word;
+}
+code[class^="language-"] {
+    font-size: 17px;
+    line-height: 1.7rem;
+}
+* {
+    border-width: inherit;
+}
+#sidebar ul {
+    list-style-type: none;
+}

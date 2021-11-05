@@ -1,0 +1,58 @@
+{% set title = 'Home' %}
+{% set filename = 'width.html' %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Width</h1>
+    <hr>
+    <p>
+    Utility width menggunakan class <code>.w-{ukuran}</code> untuk width dengan satuan <code>rem</code>, dan <code>.w-{ukuran}%</code> untuk width dengan satuan persen (<code>%</code>)
+
+    Berikut contoh penggunaannya:
+        </p>
+    <div class="mb-1">
+        <div class="grid grid-cols-1 gap-1">
+            <div class="bg-blue-100 radius-0.5">
+                <div class="w-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
+            </div>
+            <div class="bg-green-100 radius-0.5">
+                <div class="w-60% bg-green-500 p-0.5 color-white radius-l-0.5">60%</div>
+            </div>
+            <div class="bg-orange-200 radius-0.5">
+                <div class="w-50% bg-orange-400 p-0.5 color-white radius-l-0.5">50%</div>
+            </div>
+            <div class="bg-orange-100 radius-0.5">
+                <div class="w-25% bg-orange-500 p-0.5 color-white radius-l-0.5">25%</div>
+            </div>
+            <div class="bg-red-100 radius-0.5">
+                <div class="w-5% bg-red-500 p-0.5 color-white radius-l-0.5">5%</div>
+            </div>
+        </div>
+    </div>
+
+    <h1>Height</h1>
+    <hr>
+    <p>
+        Penggunaan utility height mirip dengan width, yaitu menggunakan class <code>.h-{ukuran}</code> untuk height dengan satuan <code>rem</code>, dan <code>.h-{ukuran}%</code> untuk height dengan satuan persen (<code>%</code>)
+        </p>
+
+    <div class="mb-1">
+        <div class="grid grid-cols-5 gap-1 h-20">
+            <div class="bg-blue-100 radius-0.5">
+                <div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
+            </div>
+            <div class="bg-green-100 radius-0.5">
+                <div class="h-60% bg-green-500 p-0.5 color-white radius-t-0.5">60%</div>
+            </div>
+            <div class="bg-orange-200 radius-0.5">
+                <div class="h-50% bg-orange-400 p-0.5 color-white radius-t-0.5">50%</div>
+            </div>
+            <div class="bg-orange-100 radius-0.5">
+                <div class="h-25% bg-orange-500 p-0.5 color-white radius-t-0.5">25%</div>
+            </div>
+            <div class="bg-red-100 radius-0.5">
+                <div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5">5%</div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

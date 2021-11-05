@@ -1,0 +1,32 @@
+{
+    "name": "bshade",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "laravel-mix": "^6.0.34",
+        "webpack": "^5.58.1"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.3.7",
+        "laravel-mix-nunjucks": "^1.1.0",
+        "laravel-mix-purgecss": "^6.0.0",
+        "postcss": "^8.3.9",
+        "postcss-cli": "^9.0.1",
+        "prettier": "2.4.1",
+        "sass": "^1.43.2"
+    },
+    "scripts": {
+        "dev": "mix watch -- --watch-options-poll=1000",
+        "prettier": "prettier --config ./.prettierrc --write ./dist/*.{html,js}",
+        "purgecss": "purgecss --config ./purgecss.config.js",
+        "prod": "npm run prettier && npm run purgecss",
+        "update:css": "sass ../../YG-KU-FORK/\"Penasaran yaa\"/src/scss/BshadeUI.scss:src/css/BshadeUI.css",
+        "update:prefix": "postcss src/css/BshadeUI.css --use=autoprefixer --output=src/css/BshadeUI.css",
+        "update:minify": "sass src/css/BshadeUI.css:src/css/BshadeUI.min.css --style compressed",
+        "update": "npm run update:css && npm run update:prefix && npm run update:minify"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}

@@ -1,0 +1,16 @@
+{% set title = "Classes" %}
+{% set filename = "classes.html" %}
+{% extends "layouts/main.njk" %}
+
+{% block content %}
+    <h1>Class List</h1>
+    <p>Berikut daftar class yang disediakan BshadeUI, enjoy!</p>
+    {% for item in classNameList %}
+        {% if item.isTitle %}
+            <li class="mt-1 color-white fw-500">{{item.title}}</li>
+        {% else %}
+            <li class="ml-0.8">{{item.title}} - <code>{{item.className}}</code>
+            </li>
+        {% endif %}
+    {% endfor %}
+{% endblock %}

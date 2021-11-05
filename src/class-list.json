@@ -1,0 +1,70 @@
+[
+    { "title": "LAYOUTS", "isTitle": true },
+    { "title": "Display", "className": "{display}" },
+    { "title": "Overflow", "className": "overflow-{name}" },
+    { "title": "Visibility", "className": "{visibility}" },
+
+    { "title": "BACKGROUND", "isTitle": true },
+    { "title": "Background Color", "className": "bg-{colorName}-{level}" },
+
+    { "title": "TYPOGRAPHY", "isTitle": true },
+    { "title": "Text Color", "className": "color-{colorName}-{level}" },
+    { "title": "Font Family", "className": "font-{family}" },
+    { "title": "Font Weight", "className": "fw-{size}" },
+    { "title": "Text Size", "className": "text-{size}" },
+    { "title": "Text Align", "className": "text-{direction}" },
+    { "title": "Text Decoration Line", "className": "text-decoration-{line}" },
+    { "title": "Text Decoration Style", "className": "decoration-{style}" },
+    { "title": "Text Decoration Color", "className": "decoration-{color}" },
+
+    { "title": "FLEXBOX", "isTitle": true },
+    { "title": "Flex", "className": "{name}" },
+    { "title": "Flex Flow", "className": "flow-{name}" },
+    { "title": "Flex Direction", "className": "direction-{direction}" },
+    { "title": "Justify Content", "className": "justify-content-{name}" },
+    { "title": "Justify Self", "className": "justify-self-{name}" },
+    { "title": "Justify Items", "className": "justify-items-{name}" },
+    { "title": "Align Content", "className": "align-content-{name}" },
+    { "title": "Align Self", "className": "align-self-{name}" },
+    { "title": "Align Items", "className": "align-items-{name}" },
+
+    { "title": "GRID", "isTitle": true },
+    { "title": "Grid Template Columns", "className": "grid-cols-{maxColumn}" },
+    { "title": "Grid Template Rows", "className": "grid-rows-{maxRpws}" },
+    { "title": "Grid Column", "className": "colspan-{size}" },
+    { "title": "Grid Auto Flow Col", "className": "grid-flow-col" },
+    { "title": "Grid Auto Flow Row", "className": "grid-flow-row" },
+    { "title": "Gap", "className": "gap-{size}" },
+
+    { "title": "SPACING", "isTitle": true },
+    { "title": "Padding", "className": "p{direction}-{size}" },
+    { "title": "Margin", "className": "m{direction}-{size}" },
+
+    { "title": "SIZING", "isTitle": true },
+    { "title": "Height", "className": "h-{size}" },
+    { "title": "Width", "className": "w-{size}" },
+
+    { "title": "BORDERS", "isTitle": true },
+    { "title": "Border Width", "className": "border-{size}" },
+    { "title": "Border Style", "className": "border-{style}" },
+    { "title": "Border Color", "className": "border-{colorName}-{level}" },
+    { "title": "Border Radius", "className": "radius-{size}" },
+
+    { "title": "EFFECTS", "isTitle": true },
+    { "title": "Box Shadow", "className": "shadow" },
+    { "title": "Box Shadow X/Y", "className": "shadow-{x|y}-{size}" },
+    { "title": "Box Shadow Color", "className": "shadow-{colorName}-{level}" },
+    { "title": "Box Shadow Blur", "className": "shadow-blur-{size}" },
+    { "title": "Text Shadow", "className": "tshadow" },
+    { "title": "Text Shadow X/Y", "className": "tshadow-{x|y}-{size}" },
+    { "title": "Text Shadow Color", "className": "tshadow-{colorName}-{level}" },
+    { "title": "Text Shadow Blur", "className": "tshadow-blur-{size}" },
+
+    { "title": "OUTLINE", "isTitle": true },
+    { "title": "Outline Style", "className": "outline-{style}" },
+    { "title": "Outline Width", "className": "outline-{size}" },
+    { "title": "Outline Color", "className": "outline-{colorName}-{level}" },
+
+    { "title": "INTERACTIVITY", "isTitle": true },
+    { "title": "Cursor", "className": "cursor-{name}" }
+]

@@ -1,0 +1,11 @@
+code {
+    font-size: 0.890rem;
+    color: #d63384;
+    word-wrap: break-word;
+}
+* {
+    border-width: inherit;
+}
+#sidebar ul {
+    list-style-type: none;
+}

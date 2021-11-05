@@ -1,0 +1,65 @@
+[
+    { "title": "GENERAL", "isTitle": true },
+    { "title": "Classes", "file": "classes.html" },
+    { "title": "Colors", "file": "colors.html" },
+
+    { "title": "LAYOUTS", "isTitle": true },
+    { "title": "Display" },
+    { "title": "Overflow" },
+    { "title": "Visibility" },
+
+    { "title": "BACKGROUND", "isTitle": true },
+    { "title": "Background Color" },
+
+    { "title": "TYPOGRAPHY", "isTitle": true },
+    { "title": "Text Color" },
+    { "title": "Text Size" },
+    { "title": "Text Align" },
+    { "title": "Font Family" },
+    { "title": "Font Weight" },
+    { "title": "Text Decoration (Line, Style & Color)" },
+
+    { "title": "FLEXBOX", "isTitle": true },
+    { "title": "Flex" },
+    { "title": "Flex Flow" },
+    { "title": "Flex Direction" },
+    { "title": "Justify Content" },
+    { "title": "Justify Self" },
+    { "title": "Justify Items" },
+    { "title": "Align Content" },
+    { "title": "Align Self" },
+    { "title": "Align Items" },
+
+    { "title": "GRID", "isTitle": true },
+    { "title": "Grid Template Columns" },
+    { "title": "Grid Template Rows" },
+    { "title": "Grid Column" },
+    { "title": "Grid Auto Flow (Col & Row)" },
+    { "title": "Gap" },
+
+    { "title": "SPACING", "isTitle": true },
+    { "title": "Padding" },
+    { "title": "Margin" },
+
+    { "title": "SIZING", "isTitle": true },
+    { "title": "Height" },
+    { "title": "Width" },
+
+    { "title": "BORDERS", "isTitle": true },
+    { "title": "Border Width" },
+    { "title": "Border Style" },
+    { "title": "Border Color" },
+    { "title": "Border Radius" },
+
+    { "title": "EFFECTS", "isTitle": true },
+    { "title": "Box Shadow" },
+    { "title": "Text Shadow" },
+
+    { "title": "OUTLINE", "isTitle": true },
+    { "title": "Outline Style" },
+    { "title": "Outline Width" },
+    { "title": "Outline Color" },
+
+    { "title": "INTERACTIVITY", "isTitle": true },
+    { "title": "Cursor" }
+]

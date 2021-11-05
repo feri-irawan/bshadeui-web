@@ -1,0 +1,191 @@
+{% set title = 'Home' %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+
+    <div class="p-1.2">
+
+        <h1>Utilities</h1>
+        <hr>
+        <h2>Background & Color</h2>
+            Berik ut beberapa warna yang kami sediakan. Warna ini memiliki level kelipatan <code>100</code>, misal <code>100|200|300</code> sampai level <code>900</code>
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 bg-gray-50 p-2.5 gap-0.5 radius-1 my-1">
+            {% for color in colors %}
+                <div class="{{'md:colspan-2' if color == 'teal'}} border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1 color-white  bg-{{color}}-500">.bg-{{color}}-500</div>
+            {% endfor %}
+        </div>
+    Untuk background gunakan class <code>.bg-{color}-{level}</code> dan untuk warna teks gunakan class <code>.color-{color}-{level}</code>
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;div class="color-white bg-gray-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-gray-500&lt;/div&gt;
+&lt;div class="color-white bg-blue-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-blue-500&lt;/div&gt;
+&lt;div class="color-white bg-indigo-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-indigo-500&lt;/div&gt;
+&lt;div class="color-white bg-purple-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-purple-500&lt;/div&gt;
+&lt;div class="color-white bg-pink-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-pink-500&lt;/div&gt;
+&lt;div class="color-white bg-red-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-red-500&lt;/div&gt;
+&lt;div class="color-white bg-orange-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-orange-500&lt;/div&gt;
+&lt;div class="color-white bg-yellow-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-yellow-500&lt;/div&gt;
+&lt;div class="color-white bg-green-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-green-500&lt;/div&gt;
+&lt;div class="color-white bg-teal-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-teal-500&lt;/div&gt;
+&lt;div class="color-white bg-cyan-500 border-1 border-solid border-transparent text-sm radius-0.3 inline-block py-1.2 px-1"&gt;.bg-cyan-500&lt;/div&gt;</code></pre>
+        <blockquote class="p-1 border-solid border-0.1 border-blue-400 shadow shadow-xy-0.6 mb-2 shadow-purple-200 shadow-blur-0">
+            <strong>Catatan :</strong> Warna hitam dan putih tidak memiliki level, oleh karena itu bisa langsung ditulis <code>.color-white</code>, warna lainnya memiliki level, seperti <code>.color-blue-500</code>
+        </blockquote>
+
+        <h1>Width</h1>
+        <hr>
+        <p>
+    Utility width menggunakan class <code>.w-{ukuran}</code> untuk width dengan satuan <code>rem</code>, dan <code>.w-{ukuran}%</code> untuk width dengan satuan persen (<code>%</code>)
+
+    Berikut contoh penggunaannya:
+        </p>
+        <div class="mb-1 flex justify-content-center">
+            <div class="md:w-75% grid grid-cols-1 gap-1">
+                <div class="bg-blue-100 radius-0.5">
+                    <div class="w-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
+                </div>
+                <div class="bg-green-100 radius-0.5">
+                    <div class="w-60% bg-green-500 p-0.5 color-white radius-l-0.5">60%</div>
+                </div>
+                <div class="bg-orange-200 radius-0.5">
+                    <div class="w-50% bg-orange-400 p-0.5 color-white radius-l-0.5">50%</div>
+                </div>
+                <div class="bg-orange-100 radius-0.5">
+                    <div class="w-25% bg-orange-500 p-0.5 color-white radius-l-0.5">25%</div>
+                </div>
+                <div class="bg-red-100 radius-0.5">
+                    <div class="w-5% bg-red-500 p-0.5 color-white radius-l-0.5">5%</div>
+                </div>
+            </div>
+        </div>
+
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;div class="bg-blue-100 radius-0.5"&gt;
+    &lt;div class="w-100% bg-blue-500 p-0.5 color-white radius-0.5"&gt;100%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-green-100 radius-0.5"&gt;
+    &lt;div class="w-60% bg-green-500 p-0.5 color-white radius-l-0.5"&gt;60%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-orange-200 radius-0.5"&gt;
+    &lt;div class="w-50% bg-orange-400 p-0.5 color-white radius-l-0.5"&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-orange-100 radius-0.5"&gt;
+    &lt;div class="w-25% bg-orange-500 p-0.5 color-white radius-l-0.5"&gt;25%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-red-100 radius-0.5"&gt;
+    &lt;div class="w-5% bg-red-500 p-0.5 color-white radius-l-0.5"&gt;5%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h1>Height</h1>
+        <hr>
+        <p>
+        Penggunaan utility height mirip dengan width, yaitu menggunakan class <code>.h-{ukuran}</code> untuk height dengan satuan <code>rem</code>, dan <code>.h-{ukuran}%</code> untuk height dengan satuan persen (<code>%</code>)
+        </p>
+
+        <div class="mb-1 flex justify-content-center">
+            <div class="md:w-75% grid grid-cols-5 gap-1 h-20">
+                <div class="bg-blue-100 radius-0.5">
+                    <div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
+                </div>
+                <div class="bg-green-100 radius-0.5">
+                    <div class="h-60% bg-green-500 p-0.5 color-white radius-t-0.5">60%</div>
+                </div>
+                <div class="bg-orange-200 radius-0.5">
+                    <div class="h-50% bg-orange-400 p-0.5 color-white radius-t-0.5">50%</div>
+                </div>
+                <div class="bg-orange-100 radius-0.5">
+                    <div class="h-25% bg-orange-500 p-0.5 color-white radius-t-0.5">25%</div>
+                </div>
+                <div class="bg-red-100 radius-0.5">
+                    <div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5">5%</div>
+                </div>
+            </div>
+        </div>
+
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;div class="bg-blue-100 radius-0.5"&gt;
+    &lt;div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5"&gt;100%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-green-100 radius-0.5"&gt;
+    &lt;div class="h-60% bg-green-500 p-0.5 color-white radius-t-0.5"&gt;60%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-orange-200 radius-0.5"&gt;
+    &lt;div class="h-50% bg-orange-400 p-0.5 color-white radius-t-0.5"&gt;50%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-orange-100 radius-0.5"&gt;
+    &lt;div class="h-25% bg-orange-500 p-0.5 color-white radius-t-0.5"&gt;25%&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="bg-red-100 radius-0.5"&gt;
+    &lt;div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5"&gt;5%&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+        <h1>Components</h1>
+        <hr>
+        <h2>Buttons</h2>
+        <p>
+        Membuat button menggunakan <code>&lt;button&gt;</code>
+        </p>
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0.5 bg-gray-50 p-2.5 radius-1 my-1">
+            {% for color in colors %}
+                {% if color == 'blue' %}
+                    {% for level in colorLevels %}
+                        <button class="shadow border-none fw-bold inline-block py-0.5 px-1 {{ 'color-white' if color != 100 or color != 200 or color != 300 or color != 400 }} radius-0.3 {{ 'color-'+ color +'-500' if level <= 100 }} {{ 'color-'+ color +'-600' if level == 200 }} {{ 'color-'+ color +'-700' if level == 300 }} {{ 'color-'+ color +'-800' if level == 400 }} bg-{{color}}-{{level}}">Button {{level}}</button>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-blue-500 bg-blue-50"&gt;Button 50&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-blue-500 bg-blue-100"&gt;Button 100&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-blue-600 bg-blue-200"&gt;Button 200&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-blue-700 bg-blue-300"&gt;Button 300&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-blue-800 bg-blue-400"&gt;Button 400&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-blue-500"&gt;Button 500&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-blue-600"&gt;Button 600&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-blue-700"&gt;Button 700&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-blue-800"&gt;Button 800&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-blue-900"&gt;Button 900&lt;/button&gt;</code></pre>
+
+        Button dengan warna lainnya.
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0.5 bg-gray-50 p-2.5 radius-1 my-1">
+            {% for color in colors %}
+                {% if color == 'purple' %}
+                    {% for level in colorLevels %}
+                        <button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 {{ 'color-'+ color +'-500' if level <= 100 }} {{ 'color-'+ color +'-600' if level == 200 }} {{ 'color-'+ color +'-700' if level == 300 }} {{ 'color-'+ color +'-800' if level == 400 }} bg-{{color}}-{{level}}">Button {{level}}</button>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-purple-500 bg-purple-50"&gt;Button 50&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-purple-500 bg-purple-100"&gt;Button 100&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-purple-600 bg-purple-200"&gt;Button 200&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-purple-700 bg-purple-300"&gt;Button 300&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-purple-800 bg-purple-400"&gt;Button 400&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-purple-500"&gt;Button 500&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-purple-600"&gt;Button 600&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-purple-700"&gt;Button 700&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-purple-800"&gt;Button 800&lt;/button&gt;
+&lt;button class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-purple-900"&gt;Button 900&lt;/button&gt;</code></pre>
+
+        <h3>Menggunakan Link</h3>
+        <p>
+        Membuat button menggunakan tag <code>&lt;a&gt;</code>, untuk membuatnya kamu bisa menggunakan class yang sama dengan yang di atas.
+        </p>
+        <div class="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-0.5 bg-gray-50 p-2.5 radius-1 my-1">
+            {% for color in colors %}
+                {% if color == 'cyan' %}
+                    {% for level in colorLevels %}
+                        <a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 {{ 'color-'+ color +'-500' if level <= 100 }} {{ 'color-'+ color +'-600' if level == 200 }} {{ 'color-'+ color +'-700' if level == 300 }} {{ 'color-'+ color +'-800' if level == 400 }} bg-{{color}}-{{level}}">Button {{level}}</a>
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <pre class="pl-0.5 border-solid border-l-6 border-r-0 border-t-0 border-b-0 border-blue-400"><code class="language-html">&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-cyan-500 bg-cyan-50"&gt;Button 50&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-cyan-500 bg-cyan-100"&gt;Button 100&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-cyan-600 bg-cyan-200"&gt;Button 200&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-cyan-700 bg-cyan-300"&gt;Button 300&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 color-cyan-800 bg-cyan-400"&gt;Button 400&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-cyan-500"&gt;Button 500&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-cyan-600"&gt;Button 600&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-cyan-700"&gt;Button 700&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-cyan-800"&gt;Button 800&lt;/a&gt;
+&lt;a href="#" class="shadow border-none fw-bold inline-block py-0.5 px-1 color-white radius-0.3 bg-cyan-900"&gt;Button 900&lt;/a&gt;</code></pre>
+
+    </div>
+
+{% endblock %}

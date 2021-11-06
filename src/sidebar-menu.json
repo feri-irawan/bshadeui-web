@@ -42,8 +42,8 @@
     { "title": "Margin" },
 
     { "title": "SIZING", "isTitle": true },
-    { "title": "Height" },
-    { "title": "Width" },
+    { "title": "Height", "file": "height.html" },
+    { "title": "Width", "file": "width.html" },
 
     { "title": "BORDERS", "isTitle": true },
     { "title": "Border Width" },

@@ -1,7 +1,11 @@
 code {
-    font-size: 0.890rem;
+    font-size: 0.89rem;
     color: #d63384;
     word-wrap: break-word;
+}
+code[class^="language-"] {
+    font-size: 17px;
+    line-height: 1.7rem;
 }
 * {
     border-width: inherit;

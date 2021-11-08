@@ -4,39 +4,40 @@
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>{{ title }} - {{ web_title }}</title>
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/atom-one-dark.min.css">
-        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js" integrity="sha256-mfS2sXKEV8eehy39UH7+7BwaoUaIe2TuLO2DXS+c2mI=" crossorigin="anonymous"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/atom-one-dark.min.css">
+        <script
+            src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js"
+            integrity="sha256-mfS2sXKEV8eehy39UH7+7BwaoUaIe2TuLO2DXS+c2mI="
+            crossorigin="anonymous"></script>
         <script>
             hljs.highlightAll();
         </script>
-
         <link rel="stylesheet" href="./css/BshadeUI.min.css"/>
         <link rel="stylesheet" href="./css/custom.css">
     </head>
-
     <body>
         <div id="app" class="font-inter bg-gray-950 color-gray-200 md:p-0.5">
             {% include "./navbar.njk" %}
             <div class="row mx-auto justify-content-center">
                 <div id="sidebar" class="md:col-3 bg-gray-900 radius-0.5">
-                    <div class="py-1.2 pr-1.2">
+                    <div class="py-1.2">
                         {% include "./sidebar.njk" %}
                     </div>
                 </div>
                 <div class="md:col-9">
-                    <div class="mt-0.5 md:mt-0 md:ml-0.5 p-3 radius-0.5 bg-gray-900">
-                        {% block content %}{% endblock %}
+                    <div class="mt-0.5 md:mt-0 md:ml-0.5 p-1 md:p-2 radius-0.5 bg-gray-900"> {% block content %}{% endblock %}
+                        </div>
                     </div>
                 </div>
+                {% include "./footer.njk" %}
             </div>
-            {% include "./footer.njk" %}
-        </div>
-
-        {% block js %}{% endblock %}
-    </body>
-</html>
+            {% block js %}{% endblock %}
+        </body>
+    </html>

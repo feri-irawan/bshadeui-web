@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - Bellshade Framework</title>
+        <title>Background Color - Bellshade Framework</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -69,7 +69,7 @@
                             <li class="mt-1 color-white fw-500">BACKGROUND</li>
 
                             <li class="ml-0.8 mt-0.3">
-                                <a href="background-color.html" class=""> Background Color </a>
+                                <a href="background-color.html" class="color-teal-500"> Background Color </a>
                             </li>
 
                             <li class="mt-1 color-white fw-500">TYPOGRAPHY</li>
@@ -226,11 +226,54 @@
                 </div>
                 <div class="md:col-9">
                     <div class="mt-0.5 md:mt-0 md:ml-0.5 p-1 md:p-2 radius-0.5 bg-gray-900">
-                        <h1>BshadeUI</h1>
-                        <p>CSS framework, utilities and components by Bellshade.org</p>
+                        <h1>Background Color</h1>
                         <p>
-                            <a href="classes.html" class="inline-block mt-1 px-1 py-0.6 radius-0.5 text-center fw-500 border-solid border-1 color-teal-500 border-teal-500 shadow-black shadow-xy-0.3 shadow-blur-0">Get started</a>
+                            Untuk properti
+                            <code>background-color</code>, kami telah menyediakan class bernama
+                            <code>.bg-{color}-{level}</code>
+                            yang mana
+                            <code>{color}</code>
+                            adalah nama warna, dan
+                            <code>{level}</code>
+                            adalah tingkatan warna tersebut.
                         </p>
+                        <p>Semakin tinggi level warna yang digunakan maka semakin gelap warna tersebut, semakin rendah level warna yang digunakan maka semakin putih warna tersebut.</p>
+
+                        <blockquote class="bg-gray-850 ml-1 p-1 color-gray-300">Dimana saya bisa menemukan semua warna?</blockquote>
+
+                        <p>
+                            Nah, untuk melihat semua warna yang kami sediakan, kamu bisa berkunjung ke halaman
+                            <a href="/colors.html" class="color-teal-500">Colors</a>
+                            yang ada di menu, di samping. Di halaman tersebut kamu bisa melihat banyak nama warna berserta level-nya
+                        </p>
+                        <p>Berikut contoh penggunaannya:</p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <div class="bg-cyan-400 p-1 radius-0.5">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+                                </div>
+                                <div class="bg-blue-400 p-1 radius-0.5 my-1">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+                                </div>
+                                <div class="bg-indigo-400 p-1 radius-0.5">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+                                </div>
+                            </div>
+
+                            <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;div class=&quot;bg-cyan-400 p-1 radius-0.5&quot;&gt;
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+&lt;/div&gt;
+&lt;div class=&quot;bg-blue-400 p-1 radius-0.5 my-1&quot;&gt;
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+&lt;/div&gt;
+&lt;div class=&quot;bg-indigo-400 p-1 radius-0.5&quot;&gt;
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+&lt;/div&gt;</code></pre>
+                        </div>
                     </div>
                 </div>
             </div>

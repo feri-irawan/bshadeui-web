@@ -1,0 +1,36 @@
+{#
+--------------------------------------------------
+Code block
+--------------------------------------------------
+#}
+{% macro code(preview, code) %}
+    {% if preview or code %}
+        <div
+            class="radius-1 bg-gray-850">
+            {# Jika ada preview #}
+            {% if preview %}
+                <div class="p-1 pb-0">{{ preview | safe }}</div>
+            {% endif %}
+            {# Jika ada code #}
+            {% if code %}
+                <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">{{ preview | escape if code === true else code | escape }}</code></pre>
+            {% endif %}
+        </div>
+    {% endif %}
+{% endmacro %}
+{#
+--------------------------------------------------
+Blockquote
+--------------------------------------------------
+#}
+{% macro blockquote(string, html = true) %}
+    {% if string !== '' %}
+        <blockquote class="bg-gray-850 ml-1 p-1 color-gray-300">
+            {% if html %}
+                {{ string | safe }}
+            {% else %}
+                {{ string }}
+            {% endif %}
+        </blockquote>
+    {% endif %}
+{% endmacro %}

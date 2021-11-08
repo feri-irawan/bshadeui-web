@@ -1,0 +1,57 @@
+{% set title = 'Text Color' %}
+{% set filename = 'text-color.html' %}
+{% from './utils/macros.njk' import code, blockquote %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Text Color</h1>
+    <p>
+        Untuk mengubah warna pada teks, CSS telah menyediakan sebuah properti bernama
+        <code>color</code>, dan di BshadeUI, kami pun telah menyediakan class bernama
+        <code>.color-{color}-{level}</code>
+        untuk memudahkanmu. Yang mana
+        <code>{color}</code>
+        adalah nama warna, dan
+        <code>{level}</code>
+        adalah tingkatan (level) warna tersebut.
+    </p>
+    <p>
+        Semakin tinggi level warna yang digunakan maka semakin gelap warna tersebut, semakin rendah level warna yang digunakan
+        maka semakin putih warna tersebut.
+    </p>
+    {{ blockquote('Dimana saya bisa menemukan semua warna?') }}
+    <p>
+        Nah, untuk melihat semua warna yang kami sediakan, kamu bisa berkunjung ke halaman
+        <a href="/colors.html" class="color-teal-500">Colors</a>
+        yang ada di menu, di samping. Di halaman tersebut kamu bisa melihat banyak nama warna berserta level-nya
+    </p>
+    <p>
+        Berikut contoh penggunaan class untuk warna teks:
+    </p>
+    {{ code('<div class="color-yellow-200 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="color-yellow-400 px-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="color-yellow-600 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>', true) }}
+    <p>
+        Contoh penggunaan lainnya.
+    </p>
+    {{ code('<div class="color-teal-500 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="color-blue-400 px-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="color-cyan-400 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>', true) }}
+{% endblock %}

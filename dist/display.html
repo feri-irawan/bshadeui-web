@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display - Bellshade Framework</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/styles/atom-one-dark.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.2.0/build/highlight.min.js" integrity="sha256-mfS2sXKEV8eehy39UH7+7BwaoUaIe2TuLO2DXS+c2mI=" crossorigin="anonymous"></script>
+        <script>
+            hljs.highlightAll();
+        </script>
+        <link rel="stylesheet" href="./css/BshadeUI.min.css" />
+        <link rel="stylesheet" href="./css/custom.css" />
+    </head>
+    <body>
+        <div id="app" class="font-inter bg-gray-950 color-gray-200 md:p-0.5">
+            <div class="grid grid-cols-2 align-items-center bg-gray-900 mb-0.5 radius-b-0.5 md:radius-0.5">
+                <div class="p-1">
+                    <h1 class="color-teal-500 fw-bold m-0 text-xl">
+                        <a href="/">BshadeUI</a>
+                    </h1>
+                </div>
+                <div class="text-right p-1">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#ffffff" class="bi bi-github" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58
+                1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+                0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04
+                2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01
+                1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                            />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="row mx-auto justify-content-center">
+                <div id="sidebar" class="md:col-3 bg-gray-900 radius-0.5">
+                    <div class="py-1.2">
+                        <ul class="color-gray-400 text-base px-1 md:px-1.2">
+                            <li class="mt-1 color-white fw-500">GENERAL</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="classes.html" class=""> Classes </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="colors.html" class=""> Colors </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">LAYOUTS</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="display.html" class="color-teal-500"> Display </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="overflow.html" class=""> Overflow </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="visibility.html" class=""> Visibility </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">BACKGROUND</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="background-color.html" class=""> Background Color </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">TYPOGRAPHY</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="text-color.html" class=""> Text Color </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="text-align.html" class=""> Text Align </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="font-family.html" class=""> Font Family </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="font-size.html" class=""> Font Size </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="font-weight.html" class=""> Font Weight </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="text-decoration.html" class=""> Text Decoration (Line, Style &amp; Color) </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">FLEXBOX</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="flex-flow.html" class=""> Flex Flow </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="flex-direction.html" class=""> Flex Direction </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="justify-content.html" class=""> Justify Content </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="justify-self.html" class=""> Justify Self </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="justify-items.html" class=""> Justify Items </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="align-content.html" class=""> Align Content </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="align-self.html" class=""> Align Self </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="align-items.html" class=""> Align Items </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="flexbox-row-col.html" class=""> Flexbox Row &amp; Col </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">GRID</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="grid-template-columns.html" class=""> Grid Template Columns </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="grid-template-rows.html" class=""> Grid Template Rows </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="grid-column.html" class=""> Grid Column </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="grid-row-col.html" class=""> Grid Auto Flow (Col &amp; Row) </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">SPACING</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="padding.html" class=""> Padding </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="margin.html" class=""> Margin </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">SIZING</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="height.html" class=""> Height </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="width.html" class=""> Width </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">BORDERS</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="border-width.html" class=""> Border Width </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="border-style.html" class=""> Border Style </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="border-color.html" class=""> Border Color </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="border-radius.html" class=""> Border Radius </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">EFFECTS</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="box-shadow.html" class=""> Box Shadow </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="text-shadow.html" class=""> Text Shadow </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">OUTLINE</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="outline-style.html" class=""> Outline Style </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="outline-width.html" class=""> Outline Width </a>
+                            </li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="outline-color.html" class=""> Outline Color </a>
+                            </li>
+
+                            <li class="mt-1 color-white fw-500">INTERACTIVITY</li>
+
+                            <li class="ml-0.8 mt-0.3">
+                                <a href="cursor.html" class=""> Cursor </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="md:col-9">
+                    <div class="mt-0.5 md:mt-0 md:ml-0.5 p-1 md:p-2 radius-0.5 bg-gray-900">
+                        <h1>Display</h1>
+                        <div class="h-20 w-100% overflow-y-scroll">
+                            <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.block</code>
+                                    </td>
+                                    <td>
+                                        <code>display: block;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.contents</code>
+                                    </td>
+                                    <td>
+                                        <code>display: contents;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.flex</code>
+                                    </td>
+                                    <td>
+                                        <code>display: flex;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.flex-root</code>
+                                    </td>
+                                    <td>
+                                        <code>display: flex-root;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.grid</code>
+                                    </td>
+                                    <td>
+                                        <code>display: grid;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inherit</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inherit;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.initial</code>
+                                    </td>
+                                    <td>
+                                        <code>display: initial;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inline</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inline;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inline-block</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inline-block;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inline-flex</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inline-flex;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inline-grid</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inline-grid;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.inline-table</code>
+                                    </td>
+                                    <td>
+                                        <code>display: inline-table;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.list-item</code>
+                                    </td>
+                                    <td>
+                                        <code>display: list-item;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.none</code>
+                                    </td>
+                                    <td>
+                                        <code>display: none;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.revert</code>
+                                    </td>
+                                    <td>
+                                        <code>display: revert;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-caption</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-caption;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-cell</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-cell;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-column</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-column;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-column-group</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-column-group;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-footer-group</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-footer-group;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-header-group</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-header-group;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-row</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-row;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.table-row-group</code>
+                                    </td>
+                                    <td>
+                                        <code>display: table-row-group;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.unset</code>
+                                    </td>
+                                    <td>
+                                        <code>display: unset;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.-webkit-box</code>
+                                    </td>
+                                    <td>
+                                        <code>display: -webkit-box;</code>
+                                    </td>
+                                </tr>
+
+                                <tr class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.-webkit-inline-box</code>
+                                    </td>
+                                    <td>
+                                        <code>display: -webkit-inline-box;</code>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p>
+                            Class display mudah digunakan, karna hanya nilai display-nya sama dengan nama classnya, misal
+                            <code>display: block;</code>
+                            class
+                            <code>.block</code>. Begitu pun dengan display lainnya.
+                        </p>
+                        <p>Berikut ini beberapa contoh sederhana penggunaan class display.</p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <div class="block bg-teal-500 mb-0.5 p-0.5 radius-t-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="block bg-cyan-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="block bg-blue-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="block bg-indigo-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            </div>
+
+                            <pre
+                                class="bg-gray-950 radius-b-1 overflow-hidden"
+                            ><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;div class=&quot;block bg-teal-500 mb-0.5 p-0.5 radius-t-1&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;
+&lt;div class=&quot;block bg-cyan-500 mb-0.5 p-0.5&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;
+&lt;div class=&quot;block bg-blue-500 mb-0.5 p-0.5&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;
+&lt;div class=&quot;block bg-indigo-500 mb-0.5 p-0.5&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <p>Bagaimana, sangat mudah bukan? Oke, kami kasi dua contoh lagi.</p>
+                        <br />
+                        <p>
+                            Contoh dengan display
+                            <code>inline</code>
+                        </p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <div class="inline bg-indigo-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="inline bg-cyan-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                                <div class="inline bg-blue-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                            </div>
+
+                            <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;div class=&quot;inline bg-indigo-500&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;
+&lt;div class=&quot;inline bg-cyan-500&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;
+&lt;div class=&quot;inline bg-blue-500&quot;&gt;Lorem ipsum dolor sit amet consectetur adipisicing elit.&lt;/div&gt;</code></pre>
+                        </div>
+
+                        <br /><br />
+                        <p>
+                            Contoh dengan display
+                            <code>inline-block</code>
+                        </p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <div class="text-center">
+                                    <div class="inline-block bg-orange-500 m-0.3 p-0.5">Hello World!</div>
+                                    <div class="inline-block bg-green-500 m-0.3 p-0.5">Hello World!</div>
+                                    <div class="inline-block bg-red-500 m-0.3 p-0.5">Hello World!</div>
+                                </div>
+                            </div>
+
+                            <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;div class=&quot;text-center&quot;&gt;
+    &lt;div class=&quot;inline-block bg-orange-500 m-0.3 p-0.5&quot;&gt;Hello World!&lt;/div&gt;
+    &lt;div class=&quot;inline-block bg-green-500 m-0.3 p-0.5&quot;&gt;Hello World!&lt;/div&gt;
+    &lt;div class=&quot;inline-block bg-red-500 m-0.3 p-0.5&quot;&gt;Hello World!&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 text-center md:text-left md:grid-cols-8 p-1 bg-gray-900 mt-0.5 radius-t-0.5 md:radius-0.5">
+                <div class="color-gray-200 text-xl text-center m-0">BshadeUI</div>
+                <div class="md:colspan-4 color-gray-200">
+                    <span class="invisible md:visible color-gray-600 md:mx-1">|</span>2021 Made with
+                    <svg class="-mb-0.2" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#ff008f" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z" />
+                    </svg>
+                    by
+                    <a class="color-teal-500" href="https://bellshade.org">bellshade.org</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

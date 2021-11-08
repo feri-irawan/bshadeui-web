@@ -1,0 +1,53 @@
+{% set title = 'Font Weight' %}
+{% set filename = 'font-weight.html' %}
+{% from './utils/macros.njk' import code, blockquote %}
+{% set fontWeight = [
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    'bold',
+    'bolder',
+    'lighter',
+    'inherit',
+    'initial'
+] %}
+{% extends "layouts/main.njk" %}
+{% block content %}
+    <h1>Font Weight</h1>
+    <div class="h-20 w-100% overflow-y-scroll">
+        <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+            {% for weight in fontWeight %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.fw-{{ weight }}</code>
+                    </td>
+                    <td>
+                        <code>font-weight: {{ weight }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>
+        <b>Font weight</b>
+        berfungsi untuk mengatur ketebalan dari suatu teks, seperti tipis, tebal, dan sangat tebal. Dan yang di atas itu adalah
+        daftar
+        <i>font weight</i>
+        yang BshadeUI sediakan.
+    </p>
+    <p>
+        Berikut ini dalah contoh penerapan dari font-weight di atas.
+    </p>
+    {% set sample = '' %}
+    {% for weight in fontWeight %}
+        {% set sample = sample + '<p class="fw-' + weight + '">Lorem ipsum dolor sit amet.</p>\n' %}
+    {% endfor %}
+    {{ code(sample, true) }}
+    {{ blockquote('Jika kamu tidak melihat perbedaan dari masing-masing <i>font weight</i> di atas, itu berarti font yang kamu gunakan tidak memiliki <i>font weight</i> yang sesuai. Cobalah ganti font!') }}
+{% endblock %}

@@ -1,0 +1,50 @@
+{% set title = 'Visibility' %}
+{% set filename = 'visibility.html' %}
+{% from './utils/macros.njk' import code %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Visibility</h1>
+    <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+        <tr class="border-solid border-teal-500 border-b-1">
+            <td class="w-50%">
+                <code>.visible</code>
+            </td>
+            <td>
+                <code>visibility: visible;</code>
+            </td>
+        </tr>
+        <tr class="border-solid border-teal-500 border-b-1">
+            <td class="w-50%">
+                <code>.invisible</code>
+            </td>
+            <td>
+                <code>visibility: hidden;</code>
+            </td>
+        </tr>
+    </table>
+    <p>
+        Sesuai namanya, utility visibility berfungsi untuk mengatur visibilitas dari suatu element.
+        <a href="/" class="color-teal-500">BshadeUI</a>
+        sudah menyediakan dua class visibilitas yang bisa kamu gunakan, yaitu
+        <code>.visible</code>
+        dan
+        <code>.invisible</code>
+    </p>
+    <p>
+        Berikut contoh penggunaannya:
+    </p>
+    {{ code('<div class="visible bg-red-500 p-1">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugit, ipsam aliquid incidunt vel dicta
+    reprehenderit doloremque, odit molestiae harum ad optio nihil! Quas, repudiandae recusandae optio sunt expedita
+    molestiae.
+</div>
+<div class="invisible bg-yellow-500 p-1 color-gray-900">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugit, ipsam aliquid incidunt vel dicta
+    reprehenderit doloremque, odit molestiae harum ad optio nihil! Quas, repudiandae recusandae optio sunt expedita
+    molestiae.
+</div>', true) }}
+    <p>Nah, pada contoh di atas, kamu tidak akan melihat kotak teks kedua yang berwarna
+        <b>kuning</b>, karna dia memiliki class
+        <code>.invisible</code>
+    </p>
+{% endblock %}

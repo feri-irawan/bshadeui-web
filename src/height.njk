@@ -1,50 +1,54 @@
 {% set title = "Height" %}
 {% set filename = 'height.html' %}
+{% from './utils/macros.njk' import code %}
 {% extends "layouts/main.njk" %}
-
 {% block content %}
     <h1>Height</h1>
-    <hr>
-    <div class="h-20 w-100% overflow-scroll">
+    <div class="h-20 w-100% overflow-y-scroll">
         <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
             <tr>
-                <td colspan="2">Satuan <code>rem</code>
+                <td colspan="2">Satuan
+                    <code>rem</code>
                 </td>
             </tr>
-
             {% for i in range(1, 51) %}
                 <tr class="border-solid border-teal-500 border-b-1">
                     <td class="w-50%">
-                        <code>.h-{{i}}</code>
+                        <code>.h-{{ i }}</code>
                     </td>
                     <td>
-                        <code>height: {{i}}rem;</code>
+                        <code>height: {{ i }}rem;</code>
                     </td>
                 </tr>
             {% endfor %}
             <tr>
-                <td colspan="2">Satuan <code>%</code>
+                <td colspan="2">Satuan
+                    <code>%</code>
                 </td>
             </tr>
             {% set num = 5 %}
             {% for i in range(1, 21) %}
                 <tr class="border-solid border-teal-500 border-b-1">
                     <td class="w-50%">
-                        <code>.h-{{num}}%</code>
+                        <code>.h-{{ num }}%</code>
                     </td>
                     <td>
-                        <code>height: {{num}}%;</code>
+                        <code>height: {{ num }}%;</code>
                     </td>
                 </tr>
                 {% set num = num + 5 %}
             {% endfor %}
         </table>
     </div>
-
-    <p>Penggunaan utility height mirip dengan width, yaitu menggunakan class <code>.h-{ukuran}</code> untuk height dengan satuan <code>rem</code>, dan <code>.h-{ukuran}%</code> untuk height dengan satuan persen (<code>%</code>)</p>
-    <div class="radius-1 bg-gray-850">
-        <div class="p-1">
-            <div class="grid grid-cols-5 gap-1 h-20">
+    <p>
+        Penggunaan utility height mirip dengan width, yaitu menggunakan class
+        <code>.h-{ukuran}</code>
+        untuk height dengan satuan
+        <code>rem</code>, dan
+        <code>.h-{ukuran}%</code>
+        untuk height dengan satuan persen (<code>%</code>)
+    </p>
+    {{ code('<div class="grid grid-cols-5 gap-1 h-20">
                 <div class="bg-blue-100 radius-0.5">
                     <div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
                 </div>
@@ -60,22 +64,19 @@
                 <div class="bg-red-100 radius-0.5">
                     <div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5">5%</div>
                 </div>
-            </div>
-        </div>
-        <pre><code class="language-html radius-b-1">&lt;div class="bg-blue-100 radius-0.5"&gt;
-    &lt;div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5"&gt;100%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="bg-green-100 radius-0.5"&gt;
-    &lt;div class="h-60% bg-green-500 p-0.5 color-white radius-t-0.5"&gt;60%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="bg-orange-200 radius-0.5"&gt;
-    &lt;div class="h-50% bg-orange-400 p-0.5 color-white radius-t-0.5"&gt;50%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="bg-orange-100 radius-0.5"&gt;
-    &lt;div class="h-25% bg-orange-500 p-0.5 color-white radius-t-0.5"&gt;25%&lt;/div&gt;
-&lt;/div&gt;
-&lt;div class="bg-red-100 radius-0.5"&gt;
-    &lt;div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5"&gt;5%&lt;/div&gt;
-&lt;/div&gt;</code></pre>
-    </div>
+            </div>', '<div class="bg-blue-100 radius-0.5">
+    <div class="h-100% bg-blue-500 p-0.5 color-white radius-0.5">100%</div>
+</div>
+<div class="bg-green-100 radius-0.5">
+    <div class="h-60% bg-green-500 p-0.5 color-white radius-t-0.5">60%</div>
+</div>
+<div class="bg-orange-200 radius-0.5">
+    <div class="h-50% bg-orange-400 p-0.5 color-white radius-t-0.5">50%</div>
+</div>
+<div class="bg-orange-100 radius-0.5">
+    <div class="h-25% bg-orange-500 p-0.5 color-white radius-t-0.5">25%</div>
+</div>
+<div class="bg-red-100 radius-0.5">
+    <div class="h-5% bg-red-500 p-0.5 color-white radius-t-0.5">5%</div>
+</div>') }}
 {% endblock %}

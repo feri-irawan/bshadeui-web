@@ -1,0 +1,130 @@
+{% set title = 'Font Family' %}
+{% set filename = 'font-family.html' %}
+{% from './utils/macros.njk' import code %}
+{% set fontFamily = {
+        serif: [
+            'system-ui',
+            '-apple-system',
+            '"Segoe UI"',
+            'Roboto',
+            '"Helvetica Neue"',
+            'Arial',
+            '"Noto Sans"',
+            '"Liberation Sans"',
+            'sans-serif',
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"',
+            '"Noto Color Emoji"'
+        ],
+        mono: [
+            'SFMono-Regular',
+            'Menlo',
+            'Monaco',
+            'Consolas',
+            '"Liberation Mono"',
+            '"Courier New"',
+            'monospace'
+        ],
+        poppins: [
+            '"Poppins"',
+            'sans-serif'
+        ],
+        inter: [
+            '"Inter"',
+            'sans-serif'
+        ],
+        nunito: [
+            '"Nunito"',
+            'sans-serif'
+        ],
+        montserrat: [
+            '"montserrat"',
+            'sans-serif'
+        ],
+        amiri: [
+            '"Amiri"',
+            'sans-serif'
+        ]
+} %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Font Size</h1>
+    <div class="h-20 w-100% overflow-y-scroll">
+        <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+            {% for class, fonts in fontFamily %}
+                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.font-{{ class }}</code>
+                    </td>
+                    <td>
+                        <code>font-family: {{ fonts | join(", ") }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>
+        Class font family di atas (selain
+        <code>.font-serif</code>, dan
+        <code>.font-mono</code>) adalah class tambahan jika kamu menggunakan layanan font online seperti
+        <a class="color-teal-500" href="https://fonts.google.com" target="_blank">Google Fonts</a>, misal menggunakan font
+            Poppins, Monserrat, Nunito, Inter, atau font populer lainnya dari sana, maka kamu bisa menggunakan class tambahan
+            tersebut.
+    </p>
+    <blockquote class="bg-gray-850 ml-1 p-1 color-gray-300">
+        Dengan daftar class font yang ada di atas, kami mungkin butuh masukan darimu terkait font-font yang populer di dunia web
+        desain. Jadi jika kamu punya masukan, kamu bisa mengirimkan
+        <i>issue</i>
+        ke
+        <a class="color-teal-500" href="https://github.com/bellshade/bellshade-framework" target="_blank">Github</a>
+        kami.
+    </blockquote>
+    <p>
+        Oke, berikut ini adalah contoh penggunaan class font family:
+    </p>
+    {{ code('<p class="font-serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+<p class="font-mono">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+<p class="font-inter">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>', true) }}
+    <p>
+        Contoh dengan font Poppins (Google Fonts):
+    </p>
+    {{ code('<!-- Melakukan import font Poppins dari Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+/>
+
+<p class="font-poppins">
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?
+</p>','<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Font Family - BshadeUI</title>
+
+        <!-- Melakukan import font Poppins dari Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        />
+
+        <!-- BshadeUI CSS -->
+        <link rel="stylesheet" href="BshadeUI.css">
+    </head>
+    <body>
+        <p class="font-poppins">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?
+        </p>
+    </body>
+</html>') }}
+    <p>
+        Bagaimana, cukup mudah bukan?
+    </p>
+{% endblock %}

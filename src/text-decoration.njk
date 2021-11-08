@@ -1,0 +1,93 @@
+{% set title = 'Text Decoration' %}
+{% set filename = 'text-decoration.html' %}
+{% from './utils/macros.njk' import code, blockquote %}
+{% set textDecorationLine = {
+    "strike": "line-through",
+    "none": "none",
+    "overline": "overline",
+    "underline": "underline",
+    "over-under": "overline underline"
+} %}
+{% set textDecorationStyle = {
+        "dashed": "dashed",
+        "dotted": "dotted",
+        "double": "double",
+        "inherit": "inherit",
+        "initial": "initial",
+        "solid": "solid",
+        "wavy": "wavy"
+} %}
+{% extends "layouts/main.njk" %}
+{% block content %}
+    <h1>Text Decoration</h1>
+    <p>
+        Berikut ini adalah panduan untuk utility
+        <i>text decoration</i>, mulai dari
+        <i>Line, Style,</i>
+        dan
+        <i>Color</i>.
+    </p>
+    <h2>Text Decoration Line</h2>
+    <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+        {% for key, value in textDecorationLine %}
+            <tr class="border-solid border-teal-500 border-b-1">
+                <td class="w-50%">
+                    <code>.text-decoration-{{ key }}</code>
+                </td>
+                <td>
+                    <code>text-decoration: {{ value }};</code>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p>
+        Penamaan class
+        <code>.text-decoration-{line}</code>
+        sangat mirip dengan penamaan pada properti aslinya, berikut ini contoh penggunaannya.
+    </p>
+    {% set sample = '' %}
+    {% for key, value in textDecorationLine %}
+        {% set sample = sample + '<p class="text-decoration-' + key + ' my-2">' + value | capitalize + ' : Lorem ipsum dolor sit amet.</p>\n' %}
+    {% endfor %}
+    {{ code(sample,true) }}
+    <h2>Text Decoration Style</h2>
+    <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+        {% for key, value in textDecorationStyle %}
+            <tr class="border-solid border-teal-500 border-b-1">
+                <td class="w-50%">
+                    <code>.decoration-{{ key }}</code>
+                </td>
+                <td>
+                    <code>text-decoration-style: {{ key }};</code>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p>
+        Text decoration style digunakan untuk mengatur tampilan atau bentuk dari
+        <code>text-decoration-line</code>, berikut ini contoh penerapannya:
+    </p>
+    {% set sample = '' %}
+    {% for style, value in textDecorationStyle %}
+        {% set sample = sample + '<p class="text-decoration-underline decoration-' + style + ' my-2">' + style | capitalize + ' : Lorem ipsum dolor sit amet.</p>\n' %}
+    {% endfor %}
+    {{ code(sample,true) }}
+    <h2>Text Decoration Color</h2>
+    <p>
+        Untuk mengatur warna pada dekorasi teks, kamu bisa menggunakan class
+        <code>.decoration-{color}-{level}</code>, penggunaan class ini sangat mirip dengan class pada
+        <a class="color-teal-500" href="/background-color.html" target="_blank">Background Color</a>
+        dan
+        <a class="color-teal-500" href="/text-color.html" target="_blank">Text Color</a>, yang mana
+        <code>{color}</code>
+        adalah nama warna dan
+        <code>{level}</code>
+        adalah tingkatan warna.
+    </p>
+    <p>
+        Berikut contoh penggunaannya:
+    </p>
+    {{ code('<p class="decoration-teal-500 text-decoration-overline">Lorem ipsum dolor sit amet.</p>
+<p class="decoration-red-500 text-decoration-underline">Lorem ipsum dolor sit amet.</p>
+<p class="decoration-cyan-500 text-decoration-underline decoration-wavy">Lorem ipsum dolor sit amet.</p>', true) }}
+{% endblock %}

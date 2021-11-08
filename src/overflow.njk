@@ -1,0 +1,70 @@
+{% set title = 'Overflow' %}
+{% set filename = 'overflow.html' %}
+{% from './utils/macros.njk' import code %}
+{% set overflows = ['auto', 'hidden', 'scroll', 'visible'] %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Overflow</h1>
+    <div class="h-20 w-100% overflow-y-scroll">
+        <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+            {% for overflow in overflows %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.overflow-{{ overflow }}</code>
+                    </td>
+                    <td>
+                        <code>overflow: {{ overflow }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for overflow in overflows %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.overflow-x-{{ overflow }}</code>
+                    </td>
+                    <td>
+                        <code>overflow-x: {{ overflow }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+            {% for overflow in overflows %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.overflow-y-{{ overflow }}</code>
+                    </td>
+                    <td>
+                        <code>overflow-y: {{ overflow }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>
+        Class overflow sangat mirip dengan nama propertinya, yakni diawali dengan
+        <code>.overflow-</code>
+        dan diakhiri dengan nama overflow-nya.
+    </p>
+    <p>
+        Berikut ini adalah contoh sederhana penggunaan class overflow:
+    </p>
+    {{ code('<div class="overflow-auto h-8 border-2 border-dashed border-teal-500 px-1">
+    <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum illo nulla pariatur veritatis. Asperiores placeat illo
+        odio, velit quia quisquam saepe, modi voluptas iusto vitae veritatis provident dolorum, enim quae facilis quidem quam.
+        Enim, saepe labore obcaecati officia delectus non veritatis vel quibusdam ex quasi rerum architecto sed asperiores, quae
+        praesentium voluptates placeat, quam cumque cupiditate eaque. Quaerat fuga, ipsum numquam illo iste eius libero, aliquam
+        eligendi tempora dolorum assumenda quas? Recusandae asperiores odio mollitia magnam unde, sapiente facilis commodi
+        molestiae et ex velit hic quas earum autem assumenda ad ea dolores fuga, saepe debitis provident! Nihil laboriosam ipsum
+        nam?
+    </p>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora explicabo at voluptas nisi possimus numquam
+        distinctio, impedit saepe voluptatibus vitae perspiciatis, fuga maiores labore molestiae voluptates dolorum? Harum sunt
+        cum quia vel explicabo minima saepe? Corrupti ipsum voluptate, omnis assumenda consequuntur sapiente, libero ad qui
+        deleniti aliquam dolorem eveniet ab quibusdam? Consequatur placeat labore deleniti ducimus, non nam tempore ullam cum
+        nihil iste odio animi natus similique nisi? Dolore tenetur vel iure quas pariatur eius numquam voluptatum corrupti dolor
+        suscipit, delectus omnis dignissimos dolorum expedita! Corrupti animi adipisci deserunt repellendus doloremque,
+        architecto labore officiis voluptas obcaecati atque laboriosam quae similique!
+    </p>
+</div>', true) }}
+{% endblock %}

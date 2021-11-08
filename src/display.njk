@@ -1,0 +1,84 @@
+{% set title = 'Display' %}
+{% set filename = 'display.html' %}
+{% from './utils/macros.njk' import code %}
+{% set displays = [
+    'block',
+    'contents',
+    'flex',
+    'flex-root',
+    'grid',
+    'inherit',
+    'initial',
+    'inline',
+    'inline-block',
+    'inline-flex',
+    'inline-grid',
+    'inline-table',
+    'list-item',
+    'none',
+    'revert',
+    'table',
+    'table-caption',
+    'table-cell',
+    'table-column',
+    'table-column-group',
+    'table-footer-group',
+    'table-header-group',
+    'table-row',
+    'table-row-group',
+    'unset',
+    '-webkit-box',
+    '-webkit-inline-box'
+] %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Display</h1>
+    <div class="h-20 w-100% overflow-y-scroll">
+        <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+            {% for display in displays %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.{{ display }}</code>
+                    </td>
+                    <td>
+                        <code>display: {{ display }};</code>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>
+        Class display mudah digunakan, karna hanya nilai display-nya sama dengan nama classnya, misal
+        <code>display: block;</code>
+        class
+        <code>.block</code>. Begitu pun dengan display lainnya.
+    </p>
+    <p>
+        Berikut ini beberapa contoh sederhana penggunaan class display.
+    </p>
+    {{ code('<div class="block bg-teal-500 mb-0.5 p-0.5 radius-t-1">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div class="block bg-cyan-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div class="block bg-blue-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div class="block bg-indigo-500 mb-0.5 p-0.5">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>', true) }}
+    <p>
+        Bagaimana, sangat mudah bukan? Oke, kami kasi dua contoh lagi.
+    </p>
+    <br/>
+    <p>
+        Contoh dengan display
+        <code>inline</code>
+    </p>
+    {{ code('<div class="inline bg-indigo-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div class="inline bg-cyan-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+<div class="inline bg-blue-500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>', true) }}
+    <br/><br/>
+    <p>
+        Contoh dengan display
+        <code>inline-block</code>
+    </p>
+    {{ code('<div class="text-center">
+    <div class="inline-block bg-orange-500 m-0.3 p-0.5">Hello World!</div>
+    <div class="inline-block bg-green-500 m-0.3 p-0.5">Hello World!</div>
+    <div class="inline-block bg-red-500 m-0.3 p-0.5">Hello World!</div>
+</div>', true) }}
+{% endblock %}

@@ -1,0 +1,66 @@
+{% set title = 'Font Size' %}
+{% set filename = 'font-size.html' %}
+{% from './utils/macros.njk' import code %}
+{% set fontSize = {
+        "xs": 0.75,
+        "sm": 0.875,
+        "base": 1,
+        "lg": 1.125,
+        "xl": 1.25,
+        "2xl": 1.5,
+        "3xl": 1.875,
+        "4xl": 2.25,
+        "5xl": 3,
+        "6xl": 3.75,
+        "7xl": 4.5,
+        "8xl": 6,
+        "9xl": 8
+} %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Font Size</h1>
+    <div class="h-20 w-100% overflow-y-scroll">
+        <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+            {% for class, size in fontSize %}
+                <tr class="border-solid border-teal-500 border-b-1">
+                    <td class="w-50%">
+                        <code>.text-{{ class }}</code>
+                    </td>
+                    <td>
+                        <code>font-size: {{ size }}rem;</code>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <p>
+        Font size memiliki class
+        <code>.text-{size}</code>, yang mana
+        <code>{size}</code>
+        adalah ukuran dari teks, seperti yang ada pada tabel di atas.
+    </p>
+    <p>
+        Berikut ini adalah visualisai dari semua ukuran font yang ada di tabel.
+    </p>
+    {% set sample = '' %}
+    {% for class, size in fontSize %}
+        {% set sample = sample + '<div class="text-' + class + '">Text ' + class + '</div>\n' %}
+    {% endfor %}
+    {{ code(sample, true) }}
+    <h2 class="mt-2">Heading</h2>
+    <p>
+        BshadeUI juga memiliki ukuran untuk semua tag
+        <i>heading</i>, seperti
+        <code>{{ '<h1>' | escape }}</code>,
+        <code>{{ '<h2>' | escape }}</code>,
+        <code>{{ '<h3>' | escape }}</code>, dan seterusnya.
+    </p>
+    <p>
+        Berikut visualisai dari semua tag heading.
+    </p>
+    {% set sample = '' %}
+    {% for i in range(1, 6) %}
+        {% set sample = sample + '<h' + i + '>Hello World!</h' + i + '>\n' %}
+    {% endfor %}
+    {{ code(sample, true) }}
+{% endblock %}

@@ -1,11 +1,11 @@
-<ul class="color-gray-400 text-base">
+<ul class="color-gray-400 text-base px-1 md:px-1.2">
     {% for item in sidebarMenu %}
         {% if item.isTitle %}
-            <li class="mt-1 color-white fw-500">{{item.title}}</li>
+            <li class="mt-1 color-white fw-500">{{ item.title }}</li>
         {% else %}
             <li class="ml-0.8 mt-0.3">
-                <a href="{{item.file if item.file else '#'}}" class="{{'color-teal-500' if item.file == filename}}">
-                    {{item.title}}
+                <a href="{{ item.file if item.file else '#' }}" class="{{ 'color-teal-500' if item.file == filename }}">
+                    {{ item.title }}
                 </a>
             </li>
         {% endif %}

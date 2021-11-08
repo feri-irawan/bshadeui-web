@@ -9,10 +9,10 @@
 
     { "title": "TYPOGRAPHY", "isTitle": true },
     { "title": "Text Color", "className": "color-{colorName}-{level}" },
-    { "title": "Font Family", "className": "font-{family}" },
-    { "title": "Font Weight", "className": "fw-{size}" },
-    { "title": "Text Size", "className": "text-{size}" },
     { "title": "Text Align", "className": "text-{direction}" },
+    { "title": "Font Family", "className": "font-{family}" },
+    { "title": "Font Size", "className": "text-{size}" },
+    { "title": "Font Weight", "className": "fw-{size}" },
     { "title": "Text Decoration Line", "className": "text-decoration-{line}" },
     { "title": "Text Decoration Style", "className": "decoration-{style}" },
     { "title": "Text Decoration Color", "className": "decoration-{color}" },

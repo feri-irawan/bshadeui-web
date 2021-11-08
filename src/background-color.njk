@@ -1,0 +1,42 @@
+{% set title = 'Background Color' %}
+{% set filename = 'background-color.html' %}
+{% from './utils/macros.njk' import code, blockquote %}
+{% extends 'layouts/main.njk' %}
+{% block content %}
+    <h1>Background Color</h1>
+    <p>
+        Untuk properti
+        <code>background-color</code>, kami telah menyediakan class bernama
+        <code>.bg-{color}-{level}</code>
+        yang mana
+        <code>{color}</code>
+        adalah nama warna, dan
+        <code>{level}</code>
+        adalah tingkatan warna tersebut.
+    </p>
+    <p>
+        Semakin tinggi level warna yang digunakan maka semakin gelap warna tersebut, semakin rendah level warna yang digunakan
+        maka semakin putih warna tersebut.
+    </p>
+    {{ blockquote('Dimana saya bisa menemukan semua warna?') }}
+    <p>
+        Nah, untuk melihat semua warna yang kami sediakan, kamu bisa berkunjung ke halaman
+        <a href="/colors.html" class="color-teal-500">Colors</a>
+        yang ada di menu, di samping. Di halaman tersebut kamu bisa melihat banyak nama warna berserta level-nya
+    </p>
+    <p>
+        Berikut contoh penggunaannya:
+    </p>
+    {{ code('<div class="bg-cyan-400 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="bg-blue-400 p-1 radius-0.5 my-1">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>
+<div class="bg-indigo-400 p-1 radius-0.5">
+    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias, magnam ipsam. Labore perferendis porro obcaecati
+    voluptas eos! Ratione, officiis omnis, inventore rem, debitis eius aliquam earum maiores nisi tempore veritatis.
+</div>', true) }}
+{% endblock %}

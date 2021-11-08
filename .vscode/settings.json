@@ -6,7 +6,7 @@
     "[nunjucks]": {
         "editor.defaultFormatter": "okitavera.vscode-nunjucks-formatter"
     },
-    "auto-rename-tag.activationOnLanguage": ["nunjucks"],
+    "auto-rename-tag.activationOnLanguage": ["nunjucks", "njk"],
     "emmet.includeLanguages": {
         "njk": "html",
         "nunjucks": "html"

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home - Bellshade Framework</title>
+        <title>Font Family - Bellshade Framework</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -83,7 +83,7 @@
                             </li>
 
                             <li class="ml-0.8 mt-0.3">
-                                <a href="font-family.html" class=""> Font Family </a>
+                                <a href="font-family.html" class="color-teal-500"> Font Family </a>
                             </li>
 
                             <li class="ml-0.8 mt-0.3">
@@ -226,11 +226,142 @@
                 </div>
                 <div class="md:col-9">
                     <div class="mt-0.5 md:mt-0 md:ml-0.5 p-1 md:p-2 radius-0.5 bg-gray-900">
-                        <h1>BshadeUI</h1>
-                        <p>CSS framework, utilities and components by Bellshade.org</p>
+                        <h1>Font Size</h1>
+                        <div class="h-20 w-100% overflow-y-scroll">
+                            <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-serif</code>
+                                    </td>
+                                    <td>
+                                        <code
+                                            >font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;,
+                                            &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;</code
+                                        >
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-mono</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: SFMono-Regular, Menlo, Monaco, Consolas, &quot;Liberation Mono&quot;, &quot;Courier New&quot;, monospace;</code>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-poppins</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: &quot;Poppins&quot;, sans-serif;</code>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-inter</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: &quot;Inter&quot;, sans-serif;</code>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-nunito</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: &quot;Nunito&quot;, sans-serif;</code>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-montserrat</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: &quot;montserrat&quot;, sans-serif;</code>
+                                    </td>
+                                </tr>
+
+                                <tr valign="top" class="border-solid border-teal-500 border-b-1">
+                                    <td class="w-50%">
+                                        <code>.font-amiri</code>
+                                    </td>
+                                    <td>
+                                        <code>font-family: &quot;Amiri&quot;, sans-serif;</code>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
                         <p>
-                            <a href="classes.html" class="inline-block mt-1 px-1 py-0.6 radius-0.5 text-center fw-500 border-solid border-1 color-teal-500 border-teal-500 shadow-black shadow-xy-0.3 shadow-blur-0">Get started</a>
+                            Class font family di atas (selain
+                            <code>.font-serif</code>, dan <code>.font-mono</code>) adalah class tambahan jika kamu menggunakan layanan font online seperti <a class="color-teal-500" href="https://fonts.google.com" target="_blank">Google Fonts</a>, misal menggunakan font Poppins,
+                            Monserrat, Nunito, Inter, atau font populer lainnya dari sana, maka kamu bisa menggunakan class tambahan tersebut.
                         </p>
+                        <blockquote class="bg-gray-850 ml-1 p-1 color-gray-300">
+                            Dengan daftar class font yang ada di atas, kami mungkin butuh masukan darimu terkait font-font yang populer di dunia web desain. Jadi jika kamu punya masukan, kamu bisa mengirimkan
+                            <i>issue</i>
+                            ke
+                            <a class="color-teal-500" href="https://github.com/bellshade/bellshade-framework" target="_blank">Github</a>
+                            kami.
+                        </blockquote>
+                        <p>Oke, berikut ini adalah contoh penggunaan class font family:</p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <p class="font-serif">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+                                <p class="font-mono">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+                                <p class="font-inter">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+                            </div>
+
+                            <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;p class=&quot;font-serif&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?&lt;/p&gt;
+&lt;p class=&quot;font-mono&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?&lt;/p&gt;
+&lt;p class=&quot;font-inter&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?&lt;/p&gt;</code></pre>
+                        </div>
+
+                        <p>Contoh dengan font Poppins (Google Fonts):</p>
+
+                        <div class="radius-1 bg-gray-850">
+                            <div class="p-1 pb-0">
+                                <!-- Melakukan import font Poppins dari Google Font -->
+                                <link rel="preconnect" href="https://fonts.googleapis.com" />
+                                <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+                                <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" />
+
+                                <p class="font-poppins">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?</p>
+                            </div>
+
+                            <pre class="bg-gray-950 radius-b-1 overflow-hidden"><code class="p-1 overflow-x-scroll w-100% block language-html text-sm">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot; /&gt;
+        &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+        &lt;title&gt;Font Family - BshadeUI&lt;/title&gt;
+
+        &lt;!-- Melakukan import font Poppins dari Google Font --&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot; /&gt;
+        &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin /&gt;
+        &lt;link
+            rel=&quot;stylesheet&quot;
+            href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&amp;display=swap&quot;
+        /&gt;
+
+        &lt;!-- BshadeUI CSS --&gt;
+        &lt;link rel=&quot;stylesheet&quot; href=&quot;BshadeUI.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p class=&quot;font-poppins&quot;&gt;
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt, a?
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+
+                        <p>Bagaimana, cukup mudah bukan?</p>
                     </div>
                 </div>
             </div>

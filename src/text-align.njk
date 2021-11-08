@@ -1,0 +1,57 @@
+{% set title = 'Text Align' %}
+{% set filename = 'text-align.html' %}
+{% from './utils/macros.njk' import code, blockquote %}
+{% set textAligns = [
+    center,
+    left,
+    right,
+    justify
+] %}
+{% extends "layouts/main.njk" %}
+{% block content %}
+    <h1>Text Align</h1>
+    <table border="1" cellspacing="0" cellpadding="5" class="w-100%">
+        {% for align in textAligns %}
+            <tr class="border-solid border-teal-500 border-b-1">
+                <td class="w-50%">
+                    <code>.text-{{ align }}</code>
+                </td>
+                <td>
+                    <code>text-align: {{ align }};</code>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <p>
+        <b>Text align</b>
+        berfungsi untuk mengatur keselarasan teks secara horizontal (x). Berikut ini adalah contoh penerapan class
+        <i>text align</i>.
+    </p>
+    {{ code('<p class="text-center mb-2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate quis nisi magni expedita molestiae reprehenderit eos
+    nulla ipsa qui praesentium repudiandae fugiat vero saepe aspernatur labore, exercitationem quos, sit quae architecto
+    dolores enim reiciendis quia. Recusandae, ratione! Suscipit, hic quas, aliquam, sequi voluptas adipisci beatae iusto
+    asperiores nobis dolorem error.
+</p>
+<p class="text-left mb-2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate quis nisi magni expedita molestiae reprehenderit eos
+    nulla ipsa qui praesentium repudiandae fugiat vero saepe aspernatur labore, exercitationem quos, sit quae architecto
+    dolores enim reiciendis quia. Recusandae, ratione! Suscipit, hic quas, aliquam, sequi voluptas adipisci beatae iusto
+    asperiores nobis dolorem error.
+</p>
+<p class="text-right mb-2">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate quis nisi magni expedita molestiae reprehenderit eos
+    nulla ipsa qui praesentium repudiandae fugiat vero saepe aspernatur labore, exercitationem quos, sit quae architecto
+    dolores enim reiciendis quia. Recusandae, ratione! Suscipit, hic quas, aliquam, sequi voluptas adipisci beatae iusto
+    asperiores nobis dolorem error.
+</p>
+<p class="text-justify">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate quis nisi magni expedita molestiae reprehenderit eos
+    nulla ipsa qui praesentium repudiandae fugiat vero saepe aspernatur labore, exercitationem quos, sit quae architecto
+    dolores enim reiciendis quia. Recusandae, ratione! Suscipit, hic quas, aliquam, sequi voluptas adipisci beatae iusto
+    asperiores nobis dolorem error.
+</p>', true) }}
+    <p>
+        Sangat mudah bukan?
+    </p>
+{% endblock %}
